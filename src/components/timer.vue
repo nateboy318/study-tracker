@@ -18,7 +18,7 @@ import { ref, computed } from "vue";
 
 const time = ref(0);
 const isRunning = ref(false);
-let interval;
+let worker;
 
 const formattedTime = computed(() => {
   const hours = Math.floor(time.value / 3600);
@@ -34,20 +34,25 @@ function padZero(num) {
 function startStopwatch() {
   if (!isRunning.value) {
     isRunning.value = true;
-    interval = setInterval(() => {
-      time.value++;
-    }, 10);
+    worker.postMessage("start");
   }
 }
 
 function stopStopwatch() {
-  clearInterval(interval);
   isRunning.value = false;
+  worker.postMessage("stop");
 }
 
 function resetStopwatch() {
-  clearInterval(interval);
   time.value = 0;
   isRunning.value = false;
 }
+
+// Create a new Web Worker
+worker = new Worker(new URL("./worker.js", import.meta.url));
+
+// Listen for messages from the Web Worker
+worker.onmessage = function (event) {
+  time.value = event.data;
+};
 </script>
