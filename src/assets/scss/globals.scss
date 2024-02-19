@@ -1,0 +1,107 @@
+body {
+  background-color: #0d0d0d;
+  font-family: "Roboto Mono";
+}
+
+.primary-btn {
+  font-family: "Roboto Mono";
+  align-items: center;
+  background-image: linear-gradient(144deg, #ffd600, #ff9900 35%, #ff0000);
+  border: 0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 2px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.6s;
+
+  &:active,
+  .primary-btn:hover {
+    outline: 0;
+  }
+
+  span {
+    background-color: #0d0d0d;
+    padding: 15px 40px;
+    border-radius: 6px;
+    min-width: 100px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+  }
+
+  &:hover {
+    transition: all 0.6s;
+    span {
+      background: none;
+    }
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+  @media screen and (max-width: 1039px) {
+  }
+}
+
+.alt-btn {
+  font-family: "Roboto Mono";
+  align-items: center;
+  background-image: linear-gradient(144deg, #fff, #fff 35%, #fff);
+  border: 0;
+  border-radius: 8px;
+
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 2px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:active,
+  .primary-btn:hover {
+    outline: 0;
+  }
+
+  span {
+    background-color: #0d0d0d;
+    padding: 15px 40px;
+    border-radius: 6px;
+    min-width: 100px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+  }
+
+  &:hover {
+    span {
+      background: none;
+      color: #0d0d0d;
+    }
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}

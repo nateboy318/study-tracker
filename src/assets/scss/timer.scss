@@ -1,0 +1,34 @@
+.timer {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  justify-content: center;
+  .time {
+    font-size: 200px;
+    color: white;
+    text-align: center;
+    margin: 30px;
+    @media screen and (max-width: 1039px) {
+      font-size: 150px;
+    }
+    @media screen and (max-width: 810px) {
+      font-size: 100px;
+    }
+    @media screen and (max-width: 570px) {
+      font-size: 50px;
+    }
+  }
+  .container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 700px) {
+      flex-direction: column;
+      justify-content: center;
+      span {
+        height: auto;
+      }
+    }
+  }
+}

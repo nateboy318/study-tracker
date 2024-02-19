@@ -1,0 +1,18 @@
+.locVerify {
+  display: flex;
+  justify-content: center;
+  h2 {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+  }
+  .approved {
+    color: #14ff00;
+  }
+  .unapproved {
+    color: #ff0000;
+  }
+  #map {
+    height: 100px;
+  }
+}
